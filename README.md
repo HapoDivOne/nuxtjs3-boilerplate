@@ -60,4 +60,18 @@ pnpm run preview
 yarn preview
 ```
 
+## Eslint
+
+Check coding convention:
+
+```bash
+yarn lint
+```
+
+Auto-fix error from eslint:
+
+```bash
+yarn lintfix
+```
+
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.

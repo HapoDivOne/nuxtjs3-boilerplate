@@ -1,5 +1,5 @@
 <template>
   <div>
-    <NuxtWelcome />
+    {{ $t("auth.login") }}
   </div>
 </template>
