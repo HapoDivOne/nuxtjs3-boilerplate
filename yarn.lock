@@ -1536,6 +1536,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@popperjs/core@npm:^2.9.2":
+  version: 2.11.8
+  resolution: "@popperjs/core@npm:2.11.8"
+  checksum: e5c69fdebf52a4012f6a1f14817ca8e9599cb1be73dd1387e1785e2ed5e5f0862ff817f420a87c7fc532add1f88a12e25aeb010ffcbdc98eace3d55ce2139cf0
+  languageName: node
+  linkType: hard
+
 "@rollup/plugin-alias@npm:^5.0.0":
   version: 5.0.0
   resolution: "@rollup/plugin-alias@npm:5.0.0"
@@ -1775,6 +1782,15 @@ __metadata:
     "@tufjs/canonical-json": 2.0.0
     minimatch: ^9.0.3
   checksum: aac9f2f3a4838112764bd41c1ddcb15665e133412decbbc3e35a733ae63e4d69db4636df6d42ff3a88e7dd9ffbdc17c2d90737ac52e630403d1e86d595c45ea4
+  languageName: node
+  linkType: hard
+
+"@types/bootstrap@npm:^5.2.6":
+  version: 5.2.6
+  resolution: "@types/bootstrap@npm:5.2.6"
+  dependencies:
+    "@popperjs/core": ^2.9.2
+  checksum: e8e161fcaa193bf0bfb70be37f887e7111ac0c3d562a52e0ebc9ed6dfefecfc7bfe662f69409ab22cbf15be9cedc9457a147916899a7d41eca093511da708216
   languageName: node
   linkType: hard
 
@@ -2718,6 +2734,15 @@ __metadata:
   version: 1.0.0
   resolution: "boolbase@npm:1.0.0"
   checksum: 3e25c80ef626c3a3487c73dbfc70ac322ec830666c9ad915d11b701142fab25ec1e63eff2c450c74347acfd2de854ccde865cd79ef4db1683f7c7b046ea43bb0
+  languageName: node
+  linkType: hard
+
+"bootstrap@npm:^5.3.1":
+  version: 5.3.1
+  resolution: "bootstrap@npm:5.3.1"
+  peerDependencies:
+    "@popperjs/core": ^2.11.8
+  checksum: f8176376aa6c6d8947d58a67f0c57fa0b6b7dcd087ff83454e0d727c07cf33e8107e56aa298045d652f84b53b24ac72457af73e41c5631c9ebdc1909039c5dac
   languageName: node
   linkType: hard
 
@@ -7244,7 +7269,9 @@ __metadata:
     "@nuxt/devtools": latest
     "@nuxtjs/eslint-config-typescript": ^12.0.0
     "@pinia/nuxt": ^0.4.11
+    "@types/bootstrap": ^5.2.6
     axios: ^1.5.0
+    bootstrap: ^5.3.1
     eslint: ^8.48.0
     eslint-config-prettier: ^9.0.0
     eslint-plugin-nuxt: ^4.0.0

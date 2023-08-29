@@ -12,9 +12,14 @@ export default defineNuxtConfig({
       ],
     },
   },
+  css: [
+    "bootstrap/dist/css/bootstrap.min.css",
+    "~/assets/scss/master.scss",
+    "vue-toastification/dist/index.css",
+  ],
   devtools: { enabled: true },
   modules: ["@pinia/nuxt"],
-  plugins: ["~/plugins/vue-toastification.ts"],
+  plugins: ["~/plugins/vue-toastification.ts", "~/plugins/bootstrap.client.ts"],
   runtimeConfig: {
     public: {
       apiBase: "/api/v1", // can be overridden by NUXT_PUBLIC_API_BASE environment variable
