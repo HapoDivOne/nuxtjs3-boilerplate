@@ -4,10 +4,10 @@ import ja from "~/locales/ja";
 
 export default defineNuxtPlugin(({ vueApp }) => {
   const i18n = createI18n({
-    defaultLocale: "ja",
+    defaultLocale: "en",
     legacy: false,
     globalInjection: true,
-    locale: "ja",
+    locale: "en",
     locales: [
       {
         code: "en",

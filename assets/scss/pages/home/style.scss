@@ -1,0 +1,66 @@
+@import "/assets/scss/common/mixin";
+
+.section-banner-search {
+  position: relative;
+  z-index: 2;
+}
+
+.section_search {
+  padding: 21px 30px 23px 30px;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+}
+
+.z-index-9 {
+  z-index: 9;
+}
+
+.box_search {
+  background: $color-white;
+  display: inline-block;
+  padding: 20px;
+  border-radius: 12px;
+  width: 80%;
+
+  label {
+    font: 400 16px/24px $font-family-notoSanJp;
+  }
+
+
+}
+
+// carousel
+.carousel__pagination {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: 160px;
+}
+
+.carousel__pagination-button {
+  display: block;
+  border: 0;
+  margin: 0;
+  cursor: pointer;
+  padding: 4px;
+  background: transparent;
+}
+
+.carousel__pagination-button::after {
+  display: block;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  border: 1px solid $color-white;
+  background-color: unset;
+}
+
+.carousel__pagination-button:hover::after,
+.carousel__pagination-button--active::after {
+  background-color: $color-white;
+}
