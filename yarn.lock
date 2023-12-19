@@ -969,6 +969,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@mdi/font@npm:^7.3.67":
+  version: 7.3.67
+  resolution: "@mdi/font@npm:7.3.67"
+  checksum: 34af78e108b1cbf30760a062a0d4c25e58fb13b719cef535b96116c6f522f877f19448d4389dac87176bd3bbca240b9f721b1b01599f0b333311edbff5d2fba9
+  languageName: node
+  linkType: hard
+
 "@netlify/functions@npm:^2.0.2":
   version: 2.0.2
   resolution: "@netlify/functions@npm:2.0.2"
@@ -2232,6 +2239,18 @@ __metadata:
   version: 3.3.4
   resolution: "@vue/shared@npm:3.3.4"
   checksum: 12fe53ff816bfa29ea53f89212067a86512c626b8d30149ff28b36705820f6150e1fb4e4e46897ad9eddb1d1cfc02d8941053939910eed69a905f7a5509baabe
+  languageName: node
+  linkType: hard
+
+"@vuetify/loader-shared@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "@vuetify/loader-shared@npm:2.0.1"
+  dependencies:
+    upath: ^2.0.1
+  peerDependencies:
+    vue: ^3.0.0
+    vuetify: ^3.0.0
+  checksum: c5ac79aa075f5ec4eec71ab7e647e2fc30523ad008c11c229ed4f14ea88c486f40ccf337a43307e9688d963b7139a31d9c526759542fa137d0d56e76a9a7e0b4
   languageName: node
   linkType: hard
 
@@ -7266,6 +7285,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "nuxt-app@workspace:."
   dependencies:
+    "@mdi/font": ^7.3.67
     "@nuxt/devtools": latest
     "@nuxtjs/eslint-config-typescript": ^12.0.0
     "@pinia/nuxt": ^0.4.11
@@ -7281,8 +7301,10 @@ __metadata:
     sass: ^1.66.1
     sass-loader: ^13.3.2
     typescript: ^5.2.2
+    vite-plugin-vuetify: ^2.0.1
     vue-i18n: ^9.2.2
     vue-toastification: next
+    vuetify: ^3.4.7
   languageName: unknown
   linkType: soft
 
@@ -9899,6 +9921,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"upath@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "upath@npm:2.0.1"
+  checksum: 2db04f24a03ef72204c7b969d6991abec9e2cb06fb4c13a1fd1c59bc33b46526b16c3325e55930a11ff86a77a8cbbcda8f6399bf914087028c5beae21ecdb33c
+  languageName: node
+  linkType: hard
+
 "update-browserslist-db@npm:^1.0.11":
   version: 1.0.11
   resolution: "update-browserslist-db@npm:1.0.11"
@@ -10080,6 +10109,21 @@ __metadata:
   peerDependencies:
     vite: ^3.0.0-0 || ^4.0.0-0
   checksum: 3ae31fc2249717118fa8e7eae90f7b9e92d5ed0815c0285adf1460fb229b76e99c937b3db1ebcac54d5fd842d3cf7130c888c28d0ceadf96a5dc8e2ed09fd040
+  languageName: node
+  linkType: hard
+
+"vite-plugin-vuetify@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "vite-plugin-vuetify@npm:2.0.1"
+  dependencies:
+    "@vuetify/loader-shared": ^2.0.1
+    debug: ^4.3.3
+    upath: ^2.0.1
+  peerDependencies:
+    vite: ">=5"
+    vue: ^3.0.0
+    vuetify: ^3.0.0
+  checksum: 4bfa0e377ebe2d9c08a8ffce4ca922aa641497178f96d0b54b5639b3fa5dc3c18d700712e54aa056550e1beb9c34503d2970e8bfb7dbb5c506b73c0d3cf1ff6f
   languageName: node
   linkType: hard
 
@@ -10276,6 +10320,28 @@ __metadata:
     "@vue/server-renderer": 3.3.4
     "@vue/shared": 3.3.4
   checksum: 58b6c62a66a375ce5df460fcb7ba41b37c8637c635faf06ef472ae4197f412cf9ad83586cd8e3f66c486404fbe8550e694f90ff724a571d1ba78830791099c59
+  languageName: node
+  linkType: hard
+
+"vuetify@npm:^3.4.7":
+  version: 3.4.7
+  resolution: "vuetify@npm:3.4.7"
+  peerDependencies:
+    typescript: ">=4.7"
+    vite-plugin-vuetify: ">=1.0.0-alpha.12"
+    vue: ^3.3.0
+    vue-i18n: ^9.0.0
+    webpack-plugin-vuetify: ">=2.0.0-alpha.11"
+  peerDependenciesMeta:
+    typescript:
+      optional: true
+    vite-plugin-vuetify:
+      optional: true
+    vue-i18n:
+      optional: true
+    webpack-plugin-vuetify:
+      optional: true
+  checksum: 96b3648df75d2deb4d7ff6f325e8b1ebcff7399b48fd1dd4dec3bcd44b6b579dd801ae2883debd5068dabc13e69bc6e4ec269ffa34a6f5e53ae69b206f710add
   languageName: node
   linkType: hard
 
