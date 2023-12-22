@@ -1,32 +1,48 @@
 <template>
-  <div class="auth__container">
-    <BaseLoading v-if="loading" />
-    <form v-else class="auth__container--form" @submit="submitForm">
-      <img src="~/assets/images/logo.png" alt="logo" />
-      <div class="title">パスワード変更</div>
-      <div class="form-content">
-        <div class="form-body">
-          <BaseFormInputPassword
-            v-model="formData.new_password"
-            input-id="password"
-            label="新規のパスワード"
-            :errors="errors.new_password"
-            suggest-text="パスワードは 数字・英大文字・英小文字・記号 のうち3種類を使用し8桁以上で設定して下さい。"
-          />
-          <BaseFormInputPassword
-            v-model="formData.password_confirmed"
-            input-id="passwordConfirmation"
-            label="新規のパスワード（確認）"
-            :errors="errors.password_confirmed"
-          />
+  <BaseLoading v-if="loading" />
+  <v-container v-else class="min-vh-100 bg-white">
+    <v-row>
+      <v-col class="text-center text-indigo-darken-3">
+        <h1>{{ $t("auth.password_reset.title") }}</h1>
+        <div>
+          {{ $t("auth.password_reset.sub_title") }}
         </div>
-        <div class="form-footer">
-          <BaseFormButton title="変更" :loading="btnLoading" />
-          <a href="/login" class="link-back">戻る</a>
-        </div>
-      </div>
-    </form>
-  </div>
+      </v-col>
+    </v-row>
+    <v-row class="h-100">
+      <v-col>
+        <v-sheet class="mx-auto" max-width="500">
+          <v-form @submit="submitForm" class="v-justify-center v-align-center">
+            <v-sheet class="mt-3">
+              <v-text-field
+                v-model="formData.new_password"
+                type="password"
+                id="password"
+                :rules="passwordRules"
+                :label="$t('auth.password_reset.new_password.label')"
+                variant="underlined"
+                :errors="errors.new_password"
+              ></v-text-field>
+            </v-sheet>
+            <v-sheet class="mt-3">
+              <v-text-field
+                v-model="formData.password_confirmed"
+                :rules="passwordRules"
+                id="passwordConfirmation"
+                :label="$t('auth.password_reset.password_confirmed.label')"
+                type="password"
+                variant="underlined"
+                :errors="errors.password_confirmed"
+              ></v-text-field>
+            </v-sheet>
+            <v-btn type="submit" color="indigo-darken-3 mt-8" :disabled="loadingBtn"
+                   block class="mt-2" size="x-large">{{ $t('common.buttons.send') }}
+            </v-btn>
+          </v-form>
+        </v-sheet>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script setup lang="ts">
@@ -34,12 +50,16 @@ import { ref } from "vue";
 import type { Ref } from "vue";
 import { STATUS_CODES } from "~/constants/statusCode";
 import { useAuthStore } from "~/stores/auth";
+import { useI18n } from 'vue-i18n';
+const { t } = useI18n();
 const { $toast } = useNuxtApp();
 const { token } = useRoute().query;
 const errors: any = ref({});
 const authStore = useAuthStore();
-const loading: Ref<boolean> = ref(true);
+const loading: Ref<boolean> = ref(false);
+const loadingBtn: Ref<boolean> = ref(false);
 const btnLoading = ref(false);
+const passwordRules = [(v: string) => !!v || t('auth.validation.password_required')];
 
 const formData = ref({
   new_password: "",
@@ -59,6 +79,7 @@ authStore
   });
 
 const submitForm = (event: Event) => {
+  console.log(formData);
   event.preventDefault();
   btnLoading.value = true;
   errors.value = {}; // clear error msg
