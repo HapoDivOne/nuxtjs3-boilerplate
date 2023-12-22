@@ -14,7 +14,7 @@ export default defineNuxtConfig({
     },
   },
   build: {
-    transpile: ['vuetify'],
+    transpile: ['vuetify', 'i18n'],
   },
   css: [
     "bootstrap/dist/css/bootstrap.min.css",

@@ -67,5 +67,10 @@
     }
   },
   "people": "名",
-  "yen": "円"
+  "yen": "円",
+  "email": "メールアドレス",
+  "password": "パスワード",
+  "buttons": {
+    "login": "ログイン"
+  }
 }
