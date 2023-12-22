@@ -3,7 +3,6 @@
     <v-row>
       <v-col class="text-center text-indigo-darken-3">
         <h1 class="red--text">{{ $t("auth.login.title_1") }}</h1>
-        <h1>{{ $t("auth.login.title_2") }}</h1>
         <div>
           {{ $t("auth.login.sub_title") }}
         </div>
@@ -46,7 +45,7 @@
 import { ref } from "vue";
 import { STATUS_CODES } from "~/constants/statusCode";
 import { useAuthStore } from "~/stores/auth";
-import { REGEX_EMAIL } from "~/constants/const";
+import { REGEX_EMAIL } from "~/constants/regex";
 import { useI18n } from 'vue-i18n';
 const { t } = useI18n();
 const authStore = useAuthStore();
