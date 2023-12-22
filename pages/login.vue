@@ -46,6 +46,9 @@
 import { ref } from "vue";
 import { STATUS_CODES } from "~/constants/statusCode";
 import { useAuthStore } from "~/stores/auth";
+import { REGEX_EMAIL } from "~/constants/const";
+import { useI18n } from 'vue-i18n';
+const { t } = useI18n();
 const authStore = useAuthStore();
 const email = ref("");
 const password = ref("");
@@ -53,10 +56,10 @@ const rememberToken = ref(false);
 const errors: any = ref({});
 
 const emailRules = [
-  (v: string) => !!v || 'メールアドレスは必須です',
-  (v: string) => /.+@.+\..+/.test(v) || '正しいメールアドレスを入力してください',
+  (v: string) => !!v || t('auth.validation.email_required'),
+  (v: string) => REGEX_EMAIL.test(v) || t('auth.validation.email_format'),
 ];
-const passwordRules = [(v: string) => !!v || "パスワードは必須です"];
+const passwordRules = [(v: string) => !!v || t('auth.validation.password_required')];
 
 const submitForm = (event: Event) => {
   errors.value = {}; // clear error msg
