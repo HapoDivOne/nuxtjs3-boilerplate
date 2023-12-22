@@ -1,4 +1,4 @@
-import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
+import vuetify, { transformAssetUrls } from "vite-plugin-vuetify";
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   app: {
@@ -14,7 +14,7 @@ export default defineNuxtConfig({
     },
   },
   build: {
-    transpile: ['vuetify', 'i18n'],
+    transpile: ["vuetify", "i18n"],
   },
   css: [
     "bootstrap/dist/css/bootstrap.min.css",

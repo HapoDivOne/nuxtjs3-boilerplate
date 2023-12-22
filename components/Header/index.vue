@@ -83,7 +83,6 @@
   </div>
 </template>
 <script setup lang="ts">
-
 const props = defineProps({
   userAvatar: {
     type: String,
@@ -94,7 +93,6 @@ const props = defineProps({
 const dataList: any = ref({});
 
 const customerId: any = ref(null);
-
 </script>
 
 <style lang="scss">
