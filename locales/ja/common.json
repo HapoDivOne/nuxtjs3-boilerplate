@@ -71,6 +71,9 @@
   "email": "メールアドレス",
   "password": "パスワード",
   "buttons": {
-    "login": "ログイン"
+    "login": "ログイン",
+    "send": "送信",
+    "reset": " 再設定",
+    "back": " 戻る"
   }
 }
