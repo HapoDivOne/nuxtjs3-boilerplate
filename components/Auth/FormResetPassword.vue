@@ -1,8 +1,8 @@
 <template>
   <BaseLoading v-if="loading" />
-  <v-container v-else class="min-vh-100 bg-white">
+  <v-sheet v-else class="min-vh-100">
     <v-row>
-      <v-col class="text-center text-indigo-darken-3">
+      <v-col class="text-center ">
         <h1>{{ $t("auth.password_reset.title") }}</h1>
         <div>
           {{ $t("auth.password_reset.sub_title") }}
@@ -47,7 +47,7 @@
         </v-sheet>
       </v-col>
     </v-row>
-  </v-container>
+  </v-sheet>
 </template>
 
 <script setup lang="ts">

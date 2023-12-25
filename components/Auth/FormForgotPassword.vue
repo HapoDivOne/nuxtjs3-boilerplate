@@ -1,7 +1,7 @@
 <template>
-  <v-container class="min-vh-100 bg-white">
+  <v-sheet class="min-vh-100">
     <v-row>
-      <v-col class="text-center text-indigo-darken-3">
+      <v-col class="text-center">
         <h1>{{ $t("auth.change_password.title") }}</h1>
       </v-col>
     </v-row>
@@ -21,7 +21,7 @@
                 placeholder="example@example.com"
               ></v-text-field>
             </v-sheet>
-            <v-sheet class="mt-10 text-center text-indigo-darken-3">
+            <v-sheet class="mt-10 text-center">
               <div>
                 {{ $t("auth.password_reset.title") }}
               </div>
@@ -39,13 +39,13 @@
             >{{ $t("common.buttons.reset") }}
             </v-btn>
             <v-sheet class="mt-10 text-center">
-              <a href="/login" class="text-indigo-darken-3">{{ $t("common.buttons.back") }}</a>
+              <a href="/login">{{ $t("common.buttons.back") }}</a>
             </v-sheet>
           </v-form>
         </v-sheet>
       </v-col>
     </v-row>
-  </v-container>
+  </v-sheet>
 </template>
 
 <script setup lang="ts">
