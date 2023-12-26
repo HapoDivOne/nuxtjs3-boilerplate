@@ -1,17 +1,19 @@
 <template>
-  <v-container class="min-vh-100 bg-white">
-    <v-row>
-      <v-col class="text-center text-indigo-darken-3">
-        <h1 class="red--text">{{ $t("auth.login.title_1") }}</h1>
-        <div>{{ $t("auth.login.sub_title") }}</div>
-      </v-col>
-    </v-row>
-    <v-row class="h-100">
-      <v-col>
-        <FormLogin />
-      </v-col>
-    </v-row>
-  </v-container>
+  <v-theme-provider>
+    <v-sheet class="min-vh-100">
+      <v-row>
+        <v-col class="text-center">
+          <h1 class="red--text">{{ $t("auth.login.title_1") }}</h1>
+          <div>{{ $t("auth.login.sub_title") }}</div>
+        </v-col>
+      </v-row>
+      <v-row class="h-100">
+        <v-col>
+          <FormLogin />
+        </v-col>
+      </v-row>
+    </v-sheet>
+  </v-theme-provider>
 </template>
 
 <script setup lang="ts">
