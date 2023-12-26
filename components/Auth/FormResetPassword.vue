@@ -2,7 +2,7 @@
   <BaseLoading v-if="loading" />
   <v-sheet v-else class="min-vh-100">
     <v-row>
-      <v-col class="text-center ">
+      <v-col class="text-center">
         <h1>{{ $t("auth.password_reset.title") }}</h1>
         <div>
           {{ $t("auth.password_reset.sub_title") }}
@@ -20,18 +20,18 @@
                 id="password"
                 :rules="passwordRules"
                 :label="$t('auth.password_reset.new_password.label')"
-                variant="underlined"
+                variant="outlined"
                 :errors="errors.new_password"
               ></v-text-field>
             </v-sheet>
-            <v-sheet class="mt-3">
+            <v-sheet class="mt-5">
               <v-text-field
                 v-model="formData.password_confirmed"
                 :rules="passwordConfirmationRules"
                 id="passwordConfirmation"
                 :label="$t('auth.password_reset.password_confirmed.label')"
                 type="password"
-                variant="underlined"
+                variant="outlined"
                 :errors="errors.password_confirmed"
               ></v-text-field>
             </v-sheet>
@@ -51,7 +51,6 @@
 </template>
 
 <script setup lang="ts">
-import type { Ref } from "vue";
 import { STATUS_CODES } from "~/constants/statusCode";
 import { useAuthStore } from "~/stores/auth";
 import { useI18n } from "vue-i18n";
@@ -60,7 +59,7 @@ const { $toast } = useNuxtApp();
 const { token } = useRoute().query;
 const errors: any = ref({});
 const authStore = useAuthStore();
-const loading: Ref<boolean> = ref(false);
+const loading = ref(false);
 const btnLoading = ref(false);
 
 const formData = ref({

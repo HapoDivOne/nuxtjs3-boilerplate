@@ -16,9 +16,10 @@
                 id="email"
                 :rules="emailRules"
                 :label="$t('common.email')"
-                variant="underlined"
+                variant="outlined"
                 :errors="errors.email"
                 placeholder="example@example.com"
+                prepend-inner-icon="mdi-email"
               ></v-text-field>
             </v-sheet>
             <v-sheet class="mt-10 text-center">
@@ -36,7 +37,7 @@
               class="mt-2"
               size="x-large"
               :loading="btnLoading"
-            >{{ $t("common.buttons.reset") }}
+              >{{ $t("common.buttons.reset") }}
             </v-btn>
             <v-sheet class="mt-10 text-center">
               <a href="/login">{{ $t("common.buttons.back") }}</a>

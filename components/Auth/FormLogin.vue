@@ -4,23 +4,23 @@
       <v-sheet class="mt-3">
         <v-text-field
           v-model="formData.email"
-          prepend-icon="mdi-email"
+          prepend-inner-icon="mdi-email"
           type="email"
           :rules="emailRules"
           :label="$t('common.email')"
           :error-messages="errors?.email"
-          variant="underlined"
+          variant="outlined"
         ></v-text-field>
       </v-sheet>
-      <v-sheet class="mt-3">
+      <v-sheet class="mt-5">
         <v-text-field
           v-model="formData.password"
           :rules="passwordRules"
           :label="$t('common.password')"
           :error-messages="errors?.password"
           type="password"
-          prepend-icon="mdi-lock"
-          variant="underlined"
+          prepend-inner-icon="mdi-lock"
+          variant="outlined"
         ></v-text-field>
       </v-sheet>
       <v-btn
